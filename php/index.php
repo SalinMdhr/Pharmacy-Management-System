@@ -36,7 +36,7 @@
                     // Check if the search query is set
                     $search = isset($_POST['search']) ? $_POST['search'] : '';
 
-                    $searchQuery = $_POST["search"];
+                    $searchQuery = $search;
 
                     $sqlSearch = "SELECT * FROM purchase WHERE m_name LIKE '%$searchQuery%'";
                     $sqlSearchExe = $conn->query($sqlSearch);
